@@ -1,0 +1,1 @@
+Minimal Application to get acquainted with Flask
