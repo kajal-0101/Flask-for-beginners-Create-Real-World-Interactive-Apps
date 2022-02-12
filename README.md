@@ -26,7 +26,6 @@
 * SQLAlchemy
 * PostgreSQL Database
 * Git and GitHub
-* Heroku
 
 ### What is a Python Module?
 * A python module is a file with a .py file extension.
