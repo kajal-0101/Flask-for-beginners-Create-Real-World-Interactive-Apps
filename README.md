@@ -90,13 +90,12 @@ To update
 
 To check the list of pip packages: pip list
 
-### What are Functions?
+### Function | Class | Object
 * A function is a block of code that performs a specific tasks
 * Functions may contain zero or some parameters.
 * Functions are created with def keyword followed by the name of the function.
 * functions have to be called to get them to perform a specified task.
 * Parameter is what is declared in the function, while an argument is what is passed through when calling the function.
-
 * A class is a code template (blueprint) for creating objects. To create a class, use the keyword class.
 * An object is a collection of data (variables) and methods (functions) that act on those data objects.
 * A Method is like a function except it is associated with objects and classes. Methods in objects are functions that belong to the object. Methods are implicitly used for an object for which it is called. Mathods are accessible to data that is contained within the class.
