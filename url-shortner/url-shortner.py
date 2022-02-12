@@ -3,7 +3,7 @@ import json
 import os.path
 
 app = Flask(__name__)
-app.secret_key = 'alphadalphakalpa'
+app.secret_key = ''
 
 @app.route('/')
 def index():
