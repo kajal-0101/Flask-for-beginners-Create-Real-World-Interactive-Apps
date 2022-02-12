@@ -27,3 +27,8 @@
 	* popper.js
 * JSON
 * Git and GitHub
+
+### Commands
+* Setting ENV Variables (Windows)
+	* `set FLASK_APP=file-name`
+	* `set FLASK_ENV=development`
