@@ -119,7 +119,7 @@ Requirements
 ### Development Server
 * Flask framework includes a development server for running and testing your flask application.
 * Environment variables have to be set for the server so it knows what module or package contains your flask application. Also you have to set it to run in development mode so you can see any errors and also your code changes are applied with restarting the server.
-* Environment variables can be set inside your command line interface session or inside a `.flaskenv` file. Environment variables set inside command line sessions are lost when you close the seesion of the command line interface. To activate the environment variable stored inside `.flaskenv` file you have to install the package called python-dotenv.
+* Environment variables can be set inside your command line interface session or inside a `.flaskenv` file. Environment variables set inside command line sessions are lost when you close the seesion of the command line interface. To activate the environment variable stored inside `.flaskenv` file you have to install the package called `python-dotenv`.
 * **MAC Terminal**
 	```
 	export FLASK_APP=<file-name>
@@ -137,15 +137,15 @@ Requirements
 * URL (Uniform Resource Locator)
 * Also known as a web address
 * Example: 
-		   ```
-		   https://www.google.com
-		   https://www.you-application.com [root URL('/')]
-		   https ://www.you-application.com/profile(endpoint)
-		   ```
+	```
+	https://www.google.com
+	https://www.you-application.com [root URL('/')]
+	https ://www.you-application.com/profile(endpoint)
+	```
 
 ## Basic components of a Flask Application
 
-* from flask import Flask => importing class 'Flask' from the module flask
+* `from flask import Flask` => importing class 'Flask' from the module flask
 * All flask applications must create an application instance.
 * `app = Flask(__name__)`
  	The required argument `__name__` that the instance of the flask class needs is the name of the module or package that contains the application. 
@@ -182,7 +182,7 @@ def index():
 ### What are Templates?
 * Templates are files that contain static data as well as placeholders for dynamic data.
 * Flask looks for templates in a templates subdirectory located inside the main application directory.
-* Flask comes configured with a template engine called jinja2 that allows you to integrate dynamic data with static HTML. {{ }} jinja2 autoescape any data rendered in HTML templates.
+* Flask comes configured with a template engine called jinja2 that allows you to integrate dynamic data with static HTML. `{{ }}` jinja2 autoescape any data rendered in HTML templates.
 * Flask has a function called `render_template()` that integrates with the jinja2 template engine to render templates. The function takes the template name as its first argument.
 * Any additional arguments for the `render_template()` function are key-value pairs that represent values for variables referenced in the template.
 
@@ -264,7 +264,7 @@ Hello, `{{ name|capitalize }}`
 * When a block has some content in both the base and derived templates, the content from both the derived template is used. Within this block, the derived template can call super() function to reference the contents of the block in the base template.
 
 ### Installing and Initializing Bootstrap
-* Using Falsk Bootstrap extension to integrate Bootstrap
+* Using Flask Bootstrap extension to integrate Bootstrap
 * pip install falsk-bootstrap
 * Flask-Bootstrap initialization:
 	```
@@ -276,34 +276,34 @@ Hello, `{{ name|capitalize }}`
 * Once Falsk-Bootstrap is initialized, a base template that includes all the Bootstrap files and general structure is available to the application. The application then takes advantage of Jinja2's template inheritance to extend this base template.
 
 #### Flask-Bootstrap's base.html template blocks
-block name -> description
-doc -> The entire HTML document
-html_attribs -> Attributes inside the `<html>` tag
-html -> The contents of the `<html>` tag
-head -> The contents of the `<head>` tag
-title -> The contents of the `<title>` tag
-metas -> The list of `<meta>` tags
-styles -> CSS definitions
-body_attribs -> Attributes inside the `<body>` tag
-navbar -> User-defined navigation bar
-content -> User-defined page content
-scripts -> JavaScript declarations at the bootom of the document
-body -> The contenst of the `<body>` tag
+* block name -> description
+* doc -> The entire HTML document
+* html_attribs -> Attributes inside the `<html>` tag
+* html -> The contents of the `<html>` tag
+* head -> The contents of the `<head>` tag
+* title -> The contents of the `<title>` tag
+* metas -> The list of `<meta>` tags
+* styles -> CSS definitions
+* body_attribs -> Attributes inside the `<body>` tag
+* navbar -> User-defined navigation bar
+* content -> User-defined page content
+* scripts -> JavaScript declarations at the bootom of the document
+* body -> The contenst of the `<body>` tag
 
-### Some Bootstrap Classes
-Bootstrap Class -> Description
-`.navbar` -> Creates a navigation bar
-`.navbar-nav` -> Container for navigation links inside the .navbar container
-`.navbar-brand` -> Added to link or header element inside navbar for logo or header
-`.navbar-collapse` -> Collapses navbar
-`.navbar-toggle` -> Styles the button that opens navbar
-`.sr-only` -> hides an element on all devices except screen readers
-`.page-reader` -> adds a horizontal line under the heading 
-`.container` -> Bootstrap containers are used to establish the width for the layout
-`navbar-header` -> It wraps both navbar brand and navbar toggle button and renders them properly.
-`navbar-inverse` -> Create an inverted navbar with a black backgrund and renders them properly
-`.icon-bar` -> Used for responsive layouts to create a button
-`.collapse` -> Collapse class indicates a collapsible elements
+#### Some Bootstrap Classes
+**Bootstrap Class -> Description**
+* `.navbar` -> Creates a navigation bar
+* `.navbar-nav` -> Container for navigation links inside the .navbar container
+* `.navbar-brand` -> Added to link or header element inside navbar for logo or header
+* `.navbar-collapse` -> Collapses navbar
+* `.navbar-toggle` -> Styles the button that opens navbar
+* `.sr-only` -> hides an element on all devices except screen readers
+* `.page-reader` -> adds a horizontal line under the heading 
+* `.container` -> Bootstrap containers are used to establish the width for the layout
+* `navbar-header` -> It wraps both navbar brand and navbar toggle button and renders them properly.
+* `navbar-inverse` -> Create an inverted navbar with a black backgrund and renders them properly
+* `.icon-bar` -> Used for responsive layouts to create a button
+* `.collapse` -> Collapse class indicates a collapsible elements
 
 * Many of the blocks in the table are used by Fals-Bootstrap itself, so overriding them directly would cause problems. FAOr example, the styles and scripts are where the Bootstrap CSS and JavaScript files are declared. If the application needs to add its own content to a block that already has some content, then Jinja's super() function must be used.
 Ex:
@@ -381,10 +381,10 @@ Ex:
 * Example include: CSS files, JavaScript files, Images, Audio files, logo etc.
 * Flasks looks for static files inside a static directory of your project.
 * Example: Flask Static Path
-**CSS:**
-`<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">`
-**JS:**
-`<script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>`
+	* **CSS:**
+	`<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">`
+	* **JS:**
+	`<script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>`
 
 ### What is Bootstrap?
 * Bootstrap is a free, open source HTML|CSS|JavaScript framework for building responsive webistes
